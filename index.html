@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Mushroom Mania</title>
+	<link rel="stylesheet" type="text/css" href="styles.css">
+</head>
+<body ng-app="app">
+
+	<input type="text" np-model="searchText">
+	<input type="radio" name="type" value="poisonous" ng-click="">Poisonous
+	<input type="radio" name="type" value="non-poisonous" ng-click="">Non-poisonous
+
+	<div ng-controller="MushroomController">
+		<div ng-repeat="data in mushroomList">
+			<h1>{{data.name}}</h1>
+			<h3>{{data.edible ? "Edible" : "Inedible"}}</h3>
+			<p>{{data.description}}</p>
+		</div>
+	</div>
+
+	<script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.4/angular.min.js"></script>
+	<script src="app.js"></script>
+</body>
+</html>
