@@ -31,4 +31,10 @@ myApp.controller("MushroomController", function($scope, MushroomFactory) {
 		console.log("mushroom array", mushroomArr);
 		$scope.mushroomList = mushroomArr;
 	});
+
+	$scope.showPoisonous = function() {
+		angular.forEach(mushroomArr, function(key, value) {
+			console.log("show poisonous", value);
+		})
+	};
 });
