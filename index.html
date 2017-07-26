@@ -11,7 +11,7 @@
 	<input type="radio" name="type" value="true" ng-model="edible">Non-poisonous
 
 	<div ng-controller="MushroomController">
-		<div ng-repeat="data in mushroomList | filter:searchText.description | filter: edible" >
+		<div ng-repeat="data in mushroomList | filter:searchText | filter: edible" >
 			<h1>{{data.name}}</h1>
 			<h3>{{data.edible ? "Edible" : "Inedible"}}</h3>
 			<p>{{data.description}}</p>

@@ -23,18 +23,10 @@ myApp.controller("MushroomController", function($scope, MushroomFactory) {
 
 	MushroomFactory.getMushrooms()
 	.then( (mushrooms) => {
-		console.log("mushroom data", mushrooms.data);
 		let mushroomArr = [];
 		angular.forEach(mushrooms.data, function(obj) {
 			mushroomArr.push(obj);
 		})
-		console.log("mushroom array", mushroomArr);
 		$scope.mushroomList = mushroomArr;
 	});
-
-	$scope.showPoisonous = function() {
-		angular.forEach(mushroomArr, function(key, value) {
-			console.log("show poisonous", value);
-		})
-	};
 });
